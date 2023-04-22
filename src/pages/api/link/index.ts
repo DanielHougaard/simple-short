@@ -4,7 +4,7 @@ import status from 'http-status';
 import { nanoid } from 'nanoid';
 import type { NextApiRequest, NextApiResponse } from 'next';
 import validator from 'validator';
-import { LinkError } from '../../types';
+import { LinkError } from '../../../types';
 
 const prisma = new PrismaClient();
 

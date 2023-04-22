@@ -2,7 +2,7 @@ import { PrismaClient, Link } from '@prisma/client';
 import { PrismaClientKnownRequestError, PrismaClientRustPanicError, PrismaClientUnknownRequestError } from '@prisma/client/runtime';
 import status from 'http-status';
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { LinkError } from '../../types';
+import { LinkError } from '../../../types';
 
 const prisma = new PrismaClient();
 

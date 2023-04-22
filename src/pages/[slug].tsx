@@ -1,5 +1,5 @@
 import { GetServerSideProps } from 'next';
-import { Params } from './types';
+import { Params } from '../types';
 import { getLink } from '@/services/link.service';
 
 export default function Redirect() {
