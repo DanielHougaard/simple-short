@@ -38,8 +38,8 @@ export default function Home({ host }: Props) {
           <PageContainer>
             <div className="flex h-full justify-center flex-col max-sm:p-4">
               <div>
-                <span className="text-4xl font-medium">Welcome to</span>
-                <span className="text-4xl font-bold text-blue-500"> Short.it,</span>
+                <span className="text-4xl font-medium">Welcome to,</span>
+                <span className="text-4xl font-bold text-blue-500"> simple-short</span>
                 <p className="text-xl text-blue-500">A URL Shortener that just makes sense.</p>
               </div>
 
