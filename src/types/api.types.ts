@@ -1,4 +1,4 @@
-import { PrismaClientKnownRequestError, PrismaClientUnknownRequestError, PrismaClientRustPanicError } from '@prisma/client/runtime';
+import { PrismaClientKnownRequestError, PrismaClientUnknownRequestError, PrismaClientRustPanicError } from '@prisma/client/runtime/library';
 
 export type LinkError = PrismaClientKnownRequestError
 | PrismaClientUnknownRequestError
