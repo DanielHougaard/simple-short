@@ -4,7 +4,6 @@ import React from 'react';
 import validator from 'validator';
 import * as yup from 'yup';
 import Button from '../components/Button';
-import Footer from '../components/Footer';
 import Input from '../components/Input';
 import PageContainer from '../components/PageContainer';
 import { createLink } from '../services/link.service';
@@ -34,31 +33,28 @@ export default function Home({ host }: Props) {
       })}
     >
       {({ isValid, touched, values, isSubmitting }) => (
-        <>
-          <PageContainer>
-            <div className="flex h-full justify-center flex-col max-sm:p-4">
-              <div>
-                <span className="text-4xl font-medium">Welcome to,</span>
-                <span className="text-4xl font-bold text-blue-500"> simple-short</span>
-                <p className="text-xl text-blue-500">A URL Shortener that just makes sense.</p>
-              </div>
-
-              <div className="flex items-center max-sm:flex-col justify-center mt-5 w-full gap-3">
-                <Field name="url" as={Input} invalid={!isValid && touched.url} placeholder="google.com" />
-                <Button className="max-sm:w-full" type="submit" loading={isSubmitting} disabled={!isValid}>Shorten</Button>
-              </div>
-
-              {values.short_url && (
-              <div className="flex flex-col justify-center mt-16 w-full gap-3">
-                <Input value={values.short_url} readOnly copy />
-              </div>
-              )}
+        <PageContainer>
+          <div className="flex h-full justify-center flex-col max-sm:p-4">
+            <div>
+              <span className="text-4xl font-medium">Welcome to,</span>
+              <span className="text-4xl font-bold text-blue-500"> simple-short</span>
+              <p className="text-xl text-blue-500">A URL Shortener that just makes sense.</p>
 
             </div>
 
-          </PageContainer>
-          <Footer />
-        </>
+            <div className="flex items-center max-sm:flex-col justify-center mt-5 w-full gap-3">
+              <Field name="url" as={Input} invalid={!isValid && touched.url} placeholder="google.com" />
+              <Button className="max-sm:w-full" type="submit" loading={isSubmitting} disabled={!isValid}>Shorten</Button>
+            </div>
+            <p className="opacity-80 text-gray-100 text-sm mt-1">Psst, check the project out on <a target="_blank" href="https://github.com/danielhougaard/simple-short" className="text-blue-500" rel="noreferrer">GitHub</a></p>
+
+            {values.short_url && (
+              <div className="flex flex-col justify-center mt-16 w-full gap-3">
+                <Input value={values.short_url} readOnly copy />
+              </div>
+            )}
+          </div>
+        </PageContainer>
       )}
     </Formik>
 
