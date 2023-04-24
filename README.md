@@ -19,5 +19,6 @@
 1: <code>npm install</code>. <br/>
 1: Create a <code>.env</code> file and add your MySQL connection URI to it (have a look at the .env.example file). <br/>
 2: Run the init prisma migration. <br/>
-3: <code>npm run dev</code> and head over to <http://localhost:3000> <br/>
-4: That's it! If you got anything you'd like to add just open up a PR and I'd be happy to look it over and merge it in.
+4: <code>npx prisma generate</code> to generate the prisma client types.<br/>
+5: <code>npm run dev</code> and head over to <http://localhost:3000> <br/>
+6: That's it! If you got anything you'd like to add just open up a PR and I'd be happy to look it over and merge it in.
