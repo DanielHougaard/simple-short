@@ -10,7 +10,7 @@
   <li>Serverless Next.js API ✅</li>
   <li>SQL/Prisma ✅</li>
   <li>Typescript ✅</li>
-  <li>Tailwind ✅</li>
+  <li>TailwindCSS ✅</li>
 </ul>
 
 
