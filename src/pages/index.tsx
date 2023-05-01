@@ -6,6 +6,7 @@ import * as yup from 'yup';
 import Button from '../components/Button';
 import Input from '../components/Input';
 import PageContainer from '../components/PageContainer';
+import httpSchema from '../constants/httpSchema';
 import { createLink } from '../services/link.service';
 
 type Values = {
@@ -50,7 +51,7 @@ export default function Home({ host }: Props) {
 
             {values.short_url && (
               <div className="flex flex-col justify-center mt-16 w-full gap-3">
-                <Input value={values.short_url} readOnly copy />
+                <Input value={`${httpSchema}://${values.short_url}`} readOnly copy />
               </div>
             )}
           </div>
